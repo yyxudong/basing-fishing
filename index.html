@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta_title">Bass Fishing — 专业路亚渔具商城</title>
+  <meta name="description" content="Bass Fishing 专注路亚假饵、鱼饵与渔具装备，为钓手提供高品质产品与专业服务。" data-i18n-attr="content" data-i18n="meta_description">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="header">
+    <div class="header-top">
+      <p class="header-notice" data-i18n="header_notice" data-i18n-html>新用户首单立减 15%，结账时使用优惠码 <strong>NEWBASS</strong></p>
+    </div>
+    <div class="header-main container">
+      <a href="#" class="logo" aria-label="Bass Fishing 首页">
+        <i class="fa-solid fa-fish-fins" aria-hidden="true"></i>
+        <span>Bass Fishing</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="#home" class="active" data-i18n="nav_home">首页</a></li>
+          <li><a href="#categories" data-i18n="nav_categories">商品分类</a></li>
+          <li><a href="#hot" data-i18n="nav_hot">热门商品</a></li>
+          <li><a href="#promos" data-i18n="nav_promos">促销活动</a></li>
+          <li><a href="#about" data-i18n="nav_about">关于我们</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <form class="search-form" role="search" onsubmit="event.preventDefault();">
+          <input type="search" placeholder="搜索路亚饵、鱼竿、渔轮…" aria-label="搜索" data-i18n-placeholder="search_placeholder" data-i18n-aria="search_aria">
+          <button type="submit" aria-label="搜索" data-i18n-aria="search_aria"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <a href="#" class="icon-btn" aria-label="个人中心" data-i18n-aria="aria_account"><i class="fa-regular fa-user"></i></a>
+        <a href="#" class="icon-btn cart-btn" aria-label="购物车" data-i18n-aria="aria_cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+        <button class="lang-switch" id="langSwitch" aria-label="切换语言">中 / EN</button>
+        <select class="currency-switch" id="currencySwitch" aria-label="选择货币">
+          <option value="CNY">CNY ¥</option>
+          <option value="USD">USD $</option>
+          <option value="CAD">CAD C$</option>
+        </select>
+        <button class="menu-toggle" id="menuToggle" aria-label="打开菜单" aria-expanded="false" data-i18n-aria="aria_menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 轮播图 -->
+    <section class="hero-carousel" id="home" aria-label="焦点推荐">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide active" style="--bg: url('../images/lake-fishing.png')">
+          <div class="slide-overlay"></div>
+          <div class="slide-content container">
+            <span class="slide-tag" data-i18n="slide1_tag">本季上新</span>
+            <h1 class="slide-title" data-i18n="slide1_title">探索高仿真路亚假饵</h1>
+            <p class="slide-desc" data-i18n="slide1_desc">从米诺到波爬，从软虫到复合亮片，为每一次抛投创造更多中鱼机会。</p>
+            <a href="#hot" class="btn btn-primary" data-i18n="slide1_cta">立即选购</a>
+          </div>
+        </div>
+        <div class="carousel-slide" style="--bg: url('../images/bass-fishing.png')">
+          <div class="slide-overlay"></div>
+          <div class="slide-content container">
+            <span class="slide-tag" data-i18n="slide2_tag">限时特惠</span>
+            <h1 class="slide-title" data-i18n="slide2_title">夏季清仓 低至 7 折</h1>
+            <p class="slide-desc" data-i18n="slide2_desc">精选硬饵、软饵、鱼线套装限时直降，库存有限，售完即止。</p>
+            <a href="#promos" class="btn btn-primary" data-i18n="slide2_cta">查看活动</a>
+          </div>
+        </div>
+        <div class="carousel-slide" style="--bg: url('../images/shimano-tackle.png')">
+          <div class="slide-overlay"></div>
+          <div class="slide-content container">
+            <span class="slide-tag" data-i18n="slide3_tag">专业装备</span>
+            <h1 class="slide-title" data-i18n="slide3_title">为 serious angler 打造</h1>
+            <p class="slide-desc" data-i18n="slide3_desc">轻量鱼竿、顺滑渔轮、耐磨鱼线，助你轻松应对复杂水域。</p>
+            <a href="#categories" class="btn btn-primary" data-i18n="slide3_cta">浏览分类</a>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-arrow carousel-prev" id="prevSlide" aria-label="上一张" data-i18n-aria="aria_prev"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="carousel-arrow carousel-next" id="nextSlide" aria-label="下一张" data-i18n-aria="aria_next"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="轮播导航" data-i18n-aria="aria_dots"></div>
+    </section>
+
+    <!-- 服务承诺 -->
+    <section class="features-bar">
+      <div class="container features-grid">
+        <div class="feature-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div>
+            <h3 data-i18n="feat1_title">正品保障</h3>
+            <p data-i18n="feat1_desc">严选品牌 品质可查</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-truck-fast"></i>
+          <div>
+            <h3 data-i18n="feat2_title">极速发货</h3>
+            <p data-i18n="feat2_desc">48 小时内发出</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-rotate-left"></i>
+          <div>
+            <h3 data-i18n="feat3_title">无忧退换</h3>
+            <p data-i18n="feat3_desc">7 天无理由退换</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-headset"></i>
+          <div>
+            <h3 data-i18n="feat4_title">钓手客服</h3>
+            <p data-i18n="feat4_desc">专业选饵建议</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 商品分类 -->
+    <section class="section categories" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle" data-i18n="cat_subtitle">Shop by Category</span>
+          <h2 class="section-title" data-i18n="cat_title">商品分类</h2>
+          <p class="section-desc" data-i18n="cat_desc">按需挑选，快速找到适合目标鱼种与钓场的装备。</p>
+        </div>
+        <div class="category-grid">
+          <a href="#" class="category-card">
+            <div class="category-image" style="background-image: url('images/categories/hard-baits.png')"></div>
+            <div class="category-body">
+              <div class="category-icon"><i class="fa-solid fa-fish"></i></div>
+              <h3 data-i18n="cat1_name">路亚硬饵</h3>
+              <p data-i18n="cat1_desc">米诺 / 波爬 / 铅笔 / 亮片</p>
+            </div>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-image" style="background-image: url('images/categories/soft-baits.png')"></div>
+            <div class="category-body">
+              <div class="category-icon"><i class="fa-solid fa-worm"></i></div>
+              <h3 data-i18n="cat2_name">路亚软饵</h3>
+              <p data-i18n="cat2_desc">T尾 / 卷尾 / 虾型 / 蠕虫</p>
+            </div>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-image" style="background-image: url('images/categories/line-hooks.png')"></div>
+            <div class="category-body">
+              <div class="category-icon"><i class="fa-solid fa-bezier-curve"></i></div>
+              <h3 data-i18n="cat3_name">鱼线与鱼钩</h3>
+              <p data-i18n="cat3_desc">PE线 / 碳线 / 前导线 / 曲柄钩</p>
+            </div>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-image" style="background-image: url('images/categories/rods.png')"></div>
+            <div class="category-body">
+              <div class="category-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+              <h3 data-i18n="cat4_name">鱼竿</h3>
+              <p data-i18n="cat4_desc">枪柄 / 直柄 / 泛用 / 微物</p>
+            </div>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-image" style="background-image: url('images/categories/reels.png')"></div>
+            <div class="category-body">
+              <div class="category-icon"><i class="fa-solid fa-gear"></i></div>
+              <h3 data-i18n="cat5_name">渔轮</h3>
+              <p data-i18n="cat5_desc">水滴轮 / 纺车轮 / 鼓轮</p>
+            </div>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-image" style="background-image: url('images/categories/tools.png')"></div>
+            <div class="category-body">
+              <div class="category-icon"><i class="fa-solid fa-toolbox"></i></div>
+              <h3 data-i18n="cat6_name">配件工具</h3>
+              <p data-i18n="cat6_desc">路亚盒 / 钳子 / 秤 / 控鱼器</p>
+            </div>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-image" style="background-image: url('images/categories/outdoor-wear.png')"></div>
+            <div class="category-body">
+              <div class="category-icon"><i class="fa-solid fa-shirt"></i></div>
+              <h3 data-i18n="cat7_name">户外服饰</h3>
+              <p data-i18n="cat7_desc">防晒服 / 手套 / 帽子 / 救生衣</p>
+            </div>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-image" style="background-image: url('images/categories/starter-kit.png')"></div>
+            <div class="category-body">
+              <div class="category-icon"><i class="fa-solid fa-box-open"></i></div>
+              <h3 data-i18n="cat8_name">新手套装</h3>
+              <p data-i18n="cat8_desc">竿轮饵一站式配齐</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 热门商品 -->
+    <section class="section hot-products" id="hot">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle" data-i18n="hot_subtitle">Hot Picks</span>
+          <h2 class="section-title" data-i18n="hot_title">热门商品</h2>
+          <p class="section-desc" data-i18n="hot_desc">钓友们反复回购的人气单品，口碑与销量双高。</p>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+          <!-- 商品由 JS 渲染，便于后续上新 -->
+        </div>
+
+        <div class="section-cta">
+          <a href="#" class="btn btn-outline"><span data-i18n="view_more">查看更多商品</span> <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 促销活动 -->
+    <section class="section promotions" id="promos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle" data-i18n="promo_subtitle">Promotions</span>
+          <h2 class="section-title" data-i18n="promo_title">促销活动</h2>
+          <p class="section-desc" data-i18n="promo_desc">限时优惠与组合套餐，帮你省钱升级装备。</p>
+        </div>
+        <div class="promo-grid">
+          <div class="promo-card promo-large">
+            <div class="promo-image" style="--bg: url('../images/shimano-tackle.png')"></div>
+            <div class="promo-content">
+              <span class="promo-label" data-i18n="promo1_label">限时组合</span>
+              <h3 data-i18n="promo1_title">新手路亚入门套装</h3>
+              <p data-i18n="promo1_desc">竿 + 轮 + 饵盒 + 10 枚精选饵，到手即钓。</p>
+              <div class="promo-price">
+                <span class="current" data-price="399">¥399</span>
+                <span class="original" data-original="599">¥599</span>
+              </div>
+              <a href="#" class="btn btn-primary" data-i18n="promo1_cta">立即抢购</a>
+              <div class="countdown" id="countdown1">
+                <span data-i18n="countdown_label">距结束</span>
+                <div class="countdown-timer" id="timer1">--:--:--</div>
+              </div>
+            </div>
+          </div>
+          <div class="promo-card promo-small">
+            <div class="promo-content">
+              <span class="promo-label" data-i18n="promo2_label">全场满减</span>
+              <h3 data-i18n="promo2_title">满 299 减 50</h3>
+              <p data-i18n="promo2_desc">活动期内任意商品满额自动抵扣，无需领券。</p>
+              <a href="#hot" class="btn btn-secondary" data-i18n="promo2_cta">去凑单</a>
+            </div>
+          </div>
+          <div class="promo-card promo-small promo-dark">
+            <div class="promo-content">
+              <span class="promo-label" data-i18n="promo3_label">优惠码</span>
+              <h3 data-i18n="promo3_title">老客回馈 BASS25</h3>
+              <p data-i18n="promo3_desc">输入优惠码立享 25 元无门槛优惠券。</p>
+              <button class="btn btn-light copy-code" data-code="BASS25" data-i18n="copy_code">复制优惠码</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 新品预告 -->
+    <section class="section new-arrivals" id="new">
+      <div class="container">
+        <div class="arrival-banner">
+          <div class="arrival-text">
+            <span class="section-subtitle" data-i18n="new_subtitle">Coming Soon</span>
+            <h2 data-i18n="new_title">新品即将上架</h2>
+            <p data-i18n="new_desc">我们正在挑选更多进口品牌与限定配色路亚饵，每周更新，敬请期待。</p>
+            <form class="notify-form" onsubmit="event.preventDefault();">
+              <input type="email" placeholder="输入邮箱，第一时间获取上新通知" aria-label="邮箱" data-i18n-placeholder="notify_placeholder" data-i18n-aria="notify_aria">
+              <button type="submit" class="btn btn-primary" data-i18n="notify_btn">订阅</button>
+            </form>
+          </div>
+          <div class="arrival-visual">
+            <div class="arrival-card">
+              <i class="fa-solid fa-fish"></i>
+              <span data-i18n="arrival1">限定配色软饵</span>
+            </div>
+            <div class="arrival-card">
+              <i class="fa-solid fa-water"></i>
+              <span data-i18n="arrival2">远投硬饵系列</span>
+            </div>
+            <div class="arrival-card">
+              <i class="fa-solid fa-sun"></i>
+              <span data-i18n="arrival3">夏季防晒装备</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="about">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <i class="fa-solid fa-fish-fins"></i>
+          <span>Bass Fishing</span>
+        </a>
+        <p data-i18n="footer_brand">专注路亚，服务钓手。让每一次出钓都更有收获。</p>
+        <div class="social-links">
+          <a href="#" aria-label="微信" data-i18n-aria="social_wechat"><i class="fa-brands fa-weixin"></i></a>
+          <a href="#" aria-label="微博" data-i18n-aria="social_weibo"><i class="fa-brands fa-weibo"></i></a>
+          <a href="#" aria-label="抖音" data-i18n-aria="social_tiktok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="小红书" data-i18n-aria="social_xhs"><i class="fa-solid fa-heart"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="col1_title">购物指南</h4>
+        <ul>
+          <li><a href="#" data-i18n="col1_link1">选饵攻略</a></li>
+          <li><a href="#" data-i18n="col1_link2">新手入门</a></li>
+          <li><a href="#" data-i18n="col1_link3">支付方式</a></li>
+          <li><a href="#" data-i18n="col1_link4">物流说明</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="col2_title">售后服务</h4>
+        <ul>
+          <li><a href="#" data-i18n="col2_link1">退换货政策</a></li>
+          <li><a href="#" data-i18n="col2_link2">保修服务</a></li>
+          <li><a href="#" data-i18n="col2_link3">联系客服</a></li>
+          <li><a href="#" data-i18n="col2_link4">常见问题</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="col3_title">关于我们</h4>
+        <ul>
+          <li><a href="#" data-i18n="col3_link1">品牌故事</a></li>
+          <li><a href="#" data-i18n="col3_link2">钓场合作</a></li>
+          <li><a href="#" data-i18n="col3_link3">加入我们</a></li>
+          <li><a href="#" data-i18n="col3_link4">商务合作</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-i18n="copyright">© 2026 Bass Fishing. All rights reserved. 本站仅为展示结构，商品陆续上新中。</p>
+        <p class="currency-note" data-i18n="currency_note">汇率仅供参考，交易以实际结算为准。</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 页面跳转画面效果层 -->
+  <div class="page-transition" id="pageTransition" aria-hidden="true"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
